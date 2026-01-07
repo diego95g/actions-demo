@@ -1,0 +1,23 @@
+name: Demo simple
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  demo-job:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Mostrar mensaje
+      run: echo "Hola, GitHub Actions funciona"
+
+    - name: Ver sistema operativo
+      run: uname -a
+
+    - name: Crear archivo
+      run: echo "Archivo creado por Actions" > archivo.txt
+
+    - name: Leer archivo
+      run: cat archivo.txt
